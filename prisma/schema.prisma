@@ -1,0 +1,114 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:ijse1234@localhost:3306/nodebackend"
+}
+
+model User {
+  email    String @id
+  password String
+  role     String
+}
+
+model Field {
+  field_code     String @id
+  extent_size    String
+  field_location String
+  field_name     String
+  img_01         String @db.LongText
+  img_02         String @db.LongText
+}
+
+model Staff {
+  staff_id    String @id
+  address_01  String
+  address_02  String
+  address_03  String
+  address_04  String
+  address_05  String
+  designation String
+  dob         String
+  email       String
+  first_name  String
+  gender      String
+  joined_date String
+  last_name   String
+  phone_no    Int
+  role        String
+  field_code  String
+}
+
+model Crops {
+  crop_code       String @id
+  category        String
+  common_name     String
+  crop_img        String @db.LongText
+  scientific_name String
+  season          String
+  field_code      String
+}
+
+model Vehicle {
+  vehicle_code      String @id
+  email             String
+  first_name        String
+  fuel_type         String
+  license_plate     String
+  phone_no          Int
+  remarks           String
+  role              String
+  status            String
+  veghicle_category String
+  staff_id          String
+}
+
+model Equipment {
+  eq_code        String @id
+  field_location String
+  field_name     String
+  name           String
+  phone_no       String
+  role           String
+  status         String
+  type           String
+  field_code     String
+  staff_id       String
+}
+
+model Field_code {
+  log_code       String @id
+  details        String
+  field_img      String @db.LongText
+  log_date       String
+  field_location String
+  field_name     String
+  field_code     String
+}
+
+model Crop_logs {
+  log_code  String @id
+  details   String
+  img       String @db.LongText
+  log_date  String
+  crop_name String
+  crop_code String
+}
+
+model Staff_logs {
+  log_code   String @id
+  details    String
+  img        String @db.LongText
+  log_date   String
+  first_name String
+  phone_no   String
+  staff_id   String
+}
