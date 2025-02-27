@@ -2,6 +2,7 @@ export default class Equipment{
     eq_code!:string
     field_location!:string
     field_name!:string
+    first_name!:string
     name!:string
     phone_no!:string
     role!:string
