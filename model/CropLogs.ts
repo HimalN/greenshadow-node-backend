@@ -1,9 +1,8 @@
 export default class CropLogs{
-    crop_code!:string
-    category!:string
-    common_name!:string
+    log_code!:string
+    details!:string
     img!:string
-    scientific_name!:string
-    season!:string
-    field_code!:string
+    log_date!:string
+    crop_name!:string
+    crop_code!:string
 }

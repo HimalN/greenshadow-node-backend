@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import equipmentRoutes from "./routes/equipment-routes";
 import cropsRoutes from "./routes/crop-routes";
+import cropLogsRoutes from "./routes/crop-logs-routes";
 import userAuthenticationRoutes, {authenticateToken} from "./routes/user-authentication-routes";
 
 const app = express();
@@ -23,6 +24,7 @@ app.use(authenticateToken);
 
 app.use('/equipment', equipmentRoutes);
 app.use('/crops', cropsRoutes);
+app.use('/crop-logs', cropLogsRoutes);
 
 app.listen(3000, () => {
     console.log('Server is running on port 3000');

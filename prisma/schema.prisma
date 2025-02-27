@@ -95,7 +95,7 @@ model Field_code {
   field_code     String
 }
 
-model Crop_logs {
+model crop_Logs {
   log_code  String @id
   details   String
   img       String @db.LongText
