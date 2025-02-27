@@ -75,6 +75,7 @@ model Equipment {
   eq_code        String @id
   field_location String
   field_name     String
+  first_name     String
   name           String
   phone_no       String
   role           String
