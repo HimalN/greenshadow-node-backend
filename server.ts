@@ -21,11 +21,11 @@ app.use(cors({
     credentials: true
 }));
 
-console.log("SECRET_KEY", process.env.SECRET_KEY);
-
-app.use('/auth', userAuthenticationRoutes);
-
-app.use(authenticateToken);
+// console.log("SECRET_KEY", process.env.SECRET_KEY);
+//
+// app.use('/auth', userAuthenticationRoutes);
+//
+// app.use(authenticateToken);
 
 app.use('/equipment', equipmentRoutes);
 app.use('/crops', cropsRoutes);

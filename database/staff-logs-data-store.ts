@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 
 export async function addStaffLogs(staffLogs: StaffLogs) {
     try {
-        const staffLogsData = await prisma.staff_logs.create({
+        const staffLogsData = await prisma.staff_Logs.create({
             data: {
                 log_code: staffLogs.log_code,
                 details: staffLogs.details,
@@ -24,7 +24,7 @@ export async function addStaffLogs(staffLogs: StaffLogs) {
 
 export async function deleteStaffLogs(log_code: string) {
     try {
-        await prisma.staff_logs.delete({
+        await prisma.staff_Logs.delete({
             where: {log_code: log_code}
         });
     } catch (e) {
@@ -34,7 +34,7 @@ export async function deleteStaffLogs(log_code: string) {
 
 export async function getAllStaffLogs() {
     try {
-        return await prisma.staff_logs.findMany();
+        return await prisma.staff_Logs.findMany();
     } catch (e) {
         console.log('Error Getting Staff Logs',e);
     }
@@ -42,7 +42,7 @@ export async function getAllStaffLogs() {
 
 export async function updateStaffLogs(log_code: string, staffLogs: StaffLogs) {
     try {
-        await prisma.staff_logs.update({
+        await prisma.staff_Logs.update({
             where: {log_code: log_code},
             data: {
                 log_code: staffLogs.log_code,
@@ -61,7 +61,7 @@ export async function updateStaffLogs(log_code: string, staffLogs: StaffLogs) {
 
 export async function searchStaffLogs(log_code: string) {
     try {
-        return await prisma.staff_logs.findUnique({
+        return await prisma.staff_Logs.findUnique({
             where: {log_code: log_code},
             select: {
                 log_code: true,

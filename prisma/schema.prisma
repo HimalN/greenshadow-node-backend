@@ -10,7 +10,7 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = "mysql://root:ijse1234@localhost:3306/nodebackend"
+  url      = env("DATABASE_URL")
 }
 
 model User {
@@ -51,7 +51,7 @@ model Crops {
   crop_code       String @id
   category        String
   common_name     String
-  crop_img        String @db.LongText
+  img             String @db.LongText
   scientific_name String
   season          String
   field_code      String

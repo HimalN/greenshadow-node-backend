@@ -10,7 +10,7 @@ export async function addCrops(crops: Crops) {
                 crop_code: crops.crop_code,
                 category: crops.category,
                 common_name: crops.common_name,
-                crop_img: crops.img,
+                img: crops.img,
                 scientific_name: crops.scientific_name,
                 season: crops.season,
                 field_code: crops.field_code
@@ -48,7 +48,7 @@ export async function updateCrops(crop_code: string, crops: Crops) {
                 crop_code: crops.crop_code,
                 category: crops.category,
                 common_name: crops.common_name,
-                crop_img: crops.img,
+                img: crops.img,
                 scientific_name: crops.scientific_name,
                 season: crops.season,
                 field_code: crops.field_code
@@ -67,7 +67,7 @@ export async function searchCrops(crop_code: string,) {
                 crop_code: true,
                 category: true,
                 common_name: true,
-                crop_img: true,
+                img: true,
                 scientific_name: true,
                 season: true,
                 field_code: true

@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 
 export async function addCropLogs(logs: CropLogs) {
     try {
-        const log = await prisma.crop_logs.create({
+        const log = await prisma.crop_Logs.create({
             data: {
                 log_code: logs.log_code,
                 details: logs.details,
@@ -23,7 +23,7 @@ export async function addCropLogs(logs: CropLogs) {
 
 export async function deleteCropLogs(log_code: string) {
     try {
-        await prisma.crop_logs.delete({
+        await prisma.crop_Logs.delete({
             where: {log_code: log_code}
         });
     } catch (e) {
@@ -33,7 +33,7 @@ export async function deleteCropLogs(log_code: string) {
 
 export async function getAllCropLogs() {
     try {
-        return await prisma.crop_logs.findMany();
+        return await prisma.crop_Logs.findMany();
     } catch (e) {
         console.log('Error Getting Crop Logs',e);
     }
@@ -41,7 +41,7 @@ export async function getAllCropLogs() {
 
 export async function updateCropLogs(log_code: string, logs: CropLogs) {
     try {
-        await prisma.crop_logs.update({
+        await prisma.crop_Logs.update({
             where: {log_code: log_code},
             data: {
                 log_code: logs.log_code,
@@ -59,7 +59,7 @@ export async function updateCropLogs(log_code: string, logs: CropLogs) {
 
 export async function searchCropLogs(log_code: string) {
     try {
-        return await prisma.crop_logs.findUnique({
+        return await prisma.crop_Logs.findUnique({
             where: {log_code: log_code},
             select: {
                 log_code: true,
