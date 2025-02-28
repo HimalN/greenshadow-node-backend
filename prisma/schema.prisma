@@ -85,7 +85,7 @@ model Equipment {
   staff_id       String
 }
 
-model Field_code {
+model Field_Logs {
   log_code       String @id
   details        String
   field_img      String @db.LongText
