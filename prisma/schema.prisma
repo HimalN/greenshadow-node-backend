@@ -42,7 +42,7 @@ model Staff {
   gender      String
   joined_date String
   last_name   String
-  phone_no    Int
+  phone_no    String
   role        String
   field_code  String
 }

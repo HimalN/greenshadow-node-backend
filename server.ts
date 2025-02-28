@@ -5,6 +5,7 @@ import cropsRoutes from "./routes/crop-routes";
 import cropLogsRoutes from "./routes/crop-logs-routes";
 import fieldRoutes from "./routes/field-routes";
 import fieldLogsRoutes from "./routes/field-logs-routes";
+import staffRoutes from "./routes/staff-routes";
 
 import userAuthenticationRoutes, {authenticateToken} from "./routes/user-authentication-routes";
 
@@ -30,6 +31,7 @@ app.use('/crops', cropsRoutes);
 app.use('/crop-logs', cropLogsRoutes);
 app.use('/field', fieldRoutes);
 app.use('/field-logs', fieldLogsRoutes);
+app.use('/staff', staffRoutes);
 
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
