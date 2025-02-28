@@ -104,7 +104,7 @@ model crop_Logs {
   crop_code String
 }
 
-model Staff_logs {
+model staff_Logs {
   log_code   String @id
   details    String
   img        String @db.LongText
