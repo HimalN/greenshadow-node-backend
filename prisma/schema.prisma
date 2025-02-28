@@ -58,17 +58,17 @@ model Crops {
 }
 
 model Vehicle {
-  vehicle_code      String @id
-  email             String
-  first_name        String
-  fuel_type         String
-  license_plate     String
-  phone_no          Int
-  remarks           String
-  role              String
-  status            String
-  veghicle_category String
-  staff_id          String
+  vehicle_code     String @id
+  email            String
+  first_name       String
+  fuel_type        String
+  license_plate    String
+  phone_no         String
+  remarks          String
+  role             String
+  status           String
+  vehicle_category String
+  staff_id         String
 }
 
 model Equipment {

@@ -6,7 +6,8 @@ import cropLogsRoutes from "./routes/crop-logs-routes";
 import fieldRoutes from "./routes/field-routes";
 import fieldLogsRoutes from "./routes/field-logs-routes";
 import staffRoutes from "./routes/staff-routes";
-
+import staffLogsRoutes from "./routes/staff-log-routes";
+import vehicleRoutes from "./routes/vehicle-routes";
 import userAuthenticationRoutes, {authenticateToken} from "./routes/user-authentication-routes";
 
 const app = express();
@@ -32,6 +33,8 @@ app.use('/crop-logs', cropLogsRoutes);
 app.use('/field', fieldRoutes);
 app.use('/field-logs', fieldLogsRoutes);
 app.use('/staff', staffRoutes);
+app.use('/staff-logs', staffLogsRoutes);
+app.use('/vehicle', vehicleRoutes);
 
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
